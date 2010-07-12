@@ -79,7 +79,8 @@ opts = GetoptLong.new(
     [ '--enable-checks', GetoptLong::NO_ARGUMENT],
     [ '--disable-checks', GetoptLong::NO_ARGUMENT],
     [ '--force-check', GetoptLong::NO_ARGUMENT],
-    [ '--acknowledge', GetoptLong::NO_ARGUMENT]
+    [ '--acknowledge', GetoptLong::NO_ARGUMENT],
+    [ '--help', GetoptLong::NO_ARGUMENT]
 )
 
 statusfile = "status.log"
@@ -120,6 +121,9 @@ begin
                 notify = 1
             when "--notify-disabled"
                 notify = 0
+            when "--help"
+                showhelp
+                exit 1
         end
     end
 rescue 
