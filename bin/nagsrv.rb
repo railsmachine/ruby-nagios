@@ -52,7 +52,7 @@
 # Please open an issue at ruby-nagios.googlecode.com
 # with any queries
 
-require 'nagios/status.rb'
+require 'ruby-nagios'
 
 require 'getoptlong'
 
